@@ -1,0 +1,119 @@
+
+.container{
+  /* background:linear-gradient(45deg, #0c4128, #055160); */
+  background: linear-gradient(to bottom right, #4fc68f, #4c63d2);
+  padding:15px 9%;
+  padding-bottom: 100px;
+}
+
+.container .heading{
+  text-align: center;
+  padding-bottom: 15px;
+  color:#fff;
+  text-shadow: 0 5px 10px rgba(0,0,0,.2);
+  font-size: 50px;
+}
+.container .heading__description {
+  color:#0c4128;
+  text-align: center;
+  font-weight: 500;
+  text-transform: none;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 80vw;
+  margin-bottom: 20px;
+}
+
+.container .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap:15px;
+}
+
+@media (min-width: 992px) {
+.container .box-container {
+  grid-template-columns: repeat(2, 1fr); /* Define duas colunas em telas grandes */
+}
+}
+
+.container .box-container .box{
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 80px;
+  background-color: #0c4128;
+  text-align: center;
+  padding: 30px 20px;
+  border: 8px solid var(--bs-gray-500);
+
+}
+
+.container .box-container .box img{
+  height: 100px;
+  border-radius: 8px;
+}
+
+.container .box-container .box h3{
+  color: #bcbcbc;
+  font-size: 22px;
+  padding:10px 0;
+}
+
+.container .box-container .box p{
+  color:#dfd5d5;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.container .box-container .box .btn{
+  margin-top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  background:#333;
+  color:#fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 9px 9px;
+}
+
+.container .box-container .box .btn img,
+.container .box-container .box .btn svg {
+  margin-right: 5px;
+  height: 24px;
+  margin-left: 5px;
+}
+
+.container .box-container .box .btn:hover{
+  letter-spacing: 1px;
+  background: linear-gradient(to bottom right, #62d8a1, #5970df);
+  color: var(--bs-gray-800);
+  border: 2px solid var(--bs-yellow);
+  font-weight: 600;
+}
+.container .box-container .box:hover > p {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.container .box-container .box:hover > p,
+.container .box-container .box:hover > h3 {
+  color: rgb(67, 61, 61);
+}
+
+.container .box-container .box:hover {
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.01);
+  background: linear-gradient(to bottom right, #62d8a1, #5970df);
+  border: 4px solid var(--bs-blue);
+}
+
+@media (max-width:768px){
+  .container{
+      padding:20px;
+  }
+}
+
+
+@media (max-width:992px){
+  .container .heading__description {
+    max-width: 90vw;
+  }
+}
